@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>HTML Attributes</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4aa9aff7-90a0-4aa8-901e-6482ded29863" class="page sans"><header><h1 class="page-title">HTML Attributes</h1><p class="page-description"></p></header><div class="page-body"><p id="b397cd48-5763-4d12-9fe7-e7a633dddc28" class="">
+</p><p id="6eeabc84-13e7-4b29-90c9-f95e29449ebf" class="">Certainly! Here&#x27;s a detailed description of what HTML attributes are:</p><h3 id="132503af-1847-402b-94a5-0aff38ad86c3" class="">What is an HTML Attribute?</h3><p id="a2575c1d-2b8c-4339-82a7-96d0c709703c" class="">HTML attributes are key-value pairs associated with HTML elements that provide additional information or configure specific aspects of those elements. Attributes are included in the opening tag of an HTML element and typically appear as <code>name=&quot;value&quot;</code> pairs.</p><h3 id="f60931b7-ba64-4ffd-b3db-18bc9924087b" class="">Key Features of HTML Attributes</h3><ol type="1" id="610e925f-e67b-4152-9036-83296587c234" class="numbered-list" start="1"><li><strong>Additional Information</strong>: Attributes give more context or information about the element they are attached to. For instance, the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag specifies the source of the image.</li></ol><ol type="1" id="e6ad2b7d-831e-4ef1-a1a2-151cd3db7b4f" class="numbered-list" start="2"><li><strong>Configuration</strong>: They can control the behavior or appearance of elements. For example, the <code>disabled</code> attribute on a <code>&lt;button&gt;</code> can prevent it from being clicked.</li></ol><ol type="1" id="f3e1b0b4-0a87-4fae-aa6a-37e649c5eef9" class="numbered-list" start="3"><li><strong>Syntax</strong>: Attributes are defined inside the opening tag of an element, separated by spaces, and follow the <code>name=&quot;value&quot;</code> format. Some attributes don&#x27;t require a value and are called boolean attributes, such as <code>checked</code> for checkboxes.</li></ol><ol type="1" id="7b7a64a8-233e-4a6c-86d9-ba5a1d60b1c3" class="numbered-list" start="4"><li><strong>Default Values</strong>: If an attribute is not specified, the element often uses a default value defined by the HTML standard or the browser.</li></ol><ol type="1" id="379dc892-e399-49aa-8404-96869e2992c1" class="numbered-list" start="5"><li><strong>Global and Specific Attributes</strong>:<ul id="f468a5ab-4107-47c1-9988-74602878ad21" class="bulleted-list"><li style="list-style-type:disc"><strong>Global Attributes</strong>: These can be applied to almost any HTML element, such as <code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, and <code>data-*</code>.</li></ul><ul id="1e0fc496-4d6e-49c0-8a48-5ff901daa54d" class="bulleted-list"><li style="list-style-type:disc"><strong>Element-specific Attributes</strong>: These apply only to certain elements, such as <code>src</code> for <code>&lt;img&gt;</code>, <code>href</code> for <code>&lt;a&gt;</code>, and <code>action</code> for <code>&lt;form&gt;</code>.</li></ul></li></ol><h3 id="dbc37357-fa66-42e3-81c4-ed7d36c12d5a" class="">Examples of Common HTML Attributes</h3><ol type="1" id="13f9920f-c8df-4e70-862d-f7ae76927b27" class="numbered-list" start="1"><li><code><strong>id</strong></code><strong> Attribute</strong>: Assigns a unique identifier to an element.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5e26f686-ea8f-4502-92ec-d857d2f12979" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;div id=&quot;header&quot;&gt;This is a header.&lt;/div&gt;
+</code></pre></li></ol><ol type="1" id="177ed00a-8fb5-4f61-b24b-dc70fce54b5d" class="numbered-list" start="2"><li><code><strong>class</strong></code><strong> Attribute</strong>: Assigns one or more class names to an element for styling and scripting.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8ab1dcdd-1840-49bb-8433-03350292819b" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;p class=&quot;text-bold&quot;&gt;Bold text paragraph.&lt;/p&gt;
+</code></pre></li></ol><ol type="1" id="00eb7cc0-78c0-4213-9737-87a2282e06bf" class="numbered-list" start="3"><li><code><strong>src</strong></code><strong> Attribute</strong>: Specifies the source file for elements like <code>&lt;img&gt;</code> and <code>&lt;iframe&gt;</code>.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b16d403f-28de-44cc-9215-fd42ee4c9573" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;image.jpg&quot; alt=&quot;Example Image&quot;&gt;
+</code></pre></li></ol><ol type="1" id="2d493298-b65f-4841-aa28-f35a6875f6c2" class="numbered-list" start="4"><li><code><strong>href</strong></code><strong> Attribute</strong>: Specifies the URL of a linked document or resource for <code>&lt;a&gt;</code> or <code>&lt;link&gt;</code> elements.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="12a49e9d-a3ae-4649-8c99-3412a6104991" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;a href=&quot;&lt;https://www.example.com&gt;&quot;&gt;Visit Example&lt;/a&gt;
+</code></pre></li></ol><ol type="1" id="50a307fe-e728-427c-884e-d0c591eaa0c6" class="numbered-list" start="5"><li><code><strong>alt</strong></code><strong> Attribute</strong>: Provides alternative text for an image if it cannot be displayed.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0641779b-7de7-477c-8b0d-f056f4c3895d" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;img src=&quot;image.jpg&quot; alt=&quot;Description of the image&quot;&gt;
+</code></pre></li></ol><ol type="1" id="13937e92-248b-4f16-a68c-ef65967c23a1" class="numbered-list" start="6"><li><code><strong>title</strong></code><strong> Attribute</strong>: Provides additional information, typically shown as a tooltip when hovered over.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0578d406-c625-4ddb-8386-6c80841bcc3f" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;p title=&quot;Tooltip text&quot;&gt;Hover over me.&lt;/p&gt;
+</code></pre></li></ol><ol type="1" id="84048306-542f-463c-98a6-800e537e77ce" class="numbered-list" start="7"><li><code><strong>style</strong></code><strong> Attribute</strong>: Adds inline CSS styles to an element.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="87951727-9d75-4810-9349-183f24f8c719" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;p style=&quot;color: blue; font-size: 14px;&quot;&gt;Styled text&lt;/p&gt;
+</code></pre></li></ol><ol type="1" id="5586f394-fcbb-4739-8cce-9a1c2e535633" class="numbered-list" start="8"><li><code><strong>type</strong></code><strong> Attribute</strong>: Specifies the type of an element, such as an input field type.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bd927fd2-6827-4fdd-9e1c-be49f0abc72f" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;input type=&quot;password&quot; placeholder=&quot;Enter password&quot;&gt;
+</code></pre></li></ol><ol type="1" id="ff3de9ab-e9bf-4869-b8a9-df1b1ded7bd6" class="numbered-list" start="9"><li><code><strong>placeholder</strong></code><strong> Attribute</strong>: Provides a short hint in an input field.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="90512857-644b-4f39-a620-0220bac0ce05" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;input type=&quot;text&quot; placeholder=&quot;Your name&quot;&gt;
+</code></pre></li></ol><ol type="1" id="94ccabb1-a72a-4606-a2e8-e7e2ad4baf74" class="numbered-list" start="10"><li><code><strong>disabled</strong></code><strong> Attribute</strong>: Disables an element, making it unclickable or non-interactive.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3eb10d32-cec9-4ab9-b126-66cfea03bcd3" class="code"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">&lt;button disabled&gt;Cannot click me&lt;/button&gt;
+</code></pre></li></ol><h3 id="acde09ea-90d8-4a2c-9c0b-9575ca46abff" class="">Usage in HTML Elements</h3><p id="4e655bbc-4367-4fee-ad46-04ddb1ab2a5f" class="">HTML attributes enhance the versatility and functionality of HTML elements, allowing developers to:</p><ul id="fcb2c6a0-4685-4e47-b90f-a1087d95142a" class="bulleted-list"><li style="list-style-type:disc">Style elements more precisely with CSS using classes and IDs.</li></ul><ul id="d5a2b534-0a51-458e-af86-e39b25c8b097" class="bulleted-list"><li style="list-style-type:disc">Add interactivity and manage element states with attributes like <code>disabled</code> or <code>checked</code>.</li></ul><ul id="43ac0504-58a4-4f94-a1d7-0314e34360d4" class="bulleted-list"><li style="list-style-type:disc">Provide additional context, such as alternative text for images and tooltips for elements.</li></ul><ul id="de0dcc41-7841-4640-8d75-a5267ca9cc79" class="bulleted-list"><li style="list-style-type:disc">Define the sources and destinations for media and links, enhancing user experience and accessibility.</li></ul><h3 id="90fa6264-48e2-422c-bd5d-ba191e87f00e" class="">Conclusion</h3><p id="08cc5a7b-b322-43f2-9b4d-f0ac9b1c91cd" class="">HTML attributes are essential in web development as they help control and modify the behavior of HTML elements. They add semantic meaning, improve accessibility, and enhance the visual presentation and interactivity of web pages.</p><p id="4ad238dc-87da-4298-b118-339c817cc621" class="">By understanding and effectively using HTML attributes, developers can create more dynamic, interactive, and user-friendly web applications.</p><h2 id="ded2120c-2826-4643-b24d-13491a298ccd" class="">HTML Attribute Reference</h2><p id="3e6c92e2-efda-48c2-aef9-3a8232ffdb20" class="">The table below lists all HTML attributes and what elements they can be used within:</p><table id="0fbda31b-6bac-4181-a89e-9d4ccc8e17a5" class="simple-table"><tbody><tr id="f6faaceb-0561-4d0d-9b8c-87745d9bdc0b"><td id="d?y_" class="">Attribute</td><td id="_;]?" class="">Belongs to</td><td id="eOH}" class="">Description</td></tr><tr id="413ba5a5-d3e4-4228-8c88-508a5abae1ef"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_accept.asp">accept</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies the types of files that the server accepts (only for type=&quot;file&quot;)</td></tr><tr id="1f27ba9a-effe-49da-af7a-e349bcb2fea8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_accept-charset.asp">accept-charset</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies the character encodings that are to be used for the form <br/>submission<br/></td></tr><tr id="8192d06c-b7f6-42ec-a328-77e98efe9e06"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_accesskey.asp">accesskey</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies a shortcut key to activate/focus an element</td></tr><tr id="811da8c2-15eb-461d-848d-fd31ce733afe"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_action.asp">action</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies where to send the form-data when a form is submitted</td></tr><tr id="84ed7e1f-0ee9-440a-9eec-beabafe9ebb5"><td id="d?y_" class="">align</td><td id="_;]?" class="">Not supported in HTML 5.</td><td id="eOH}" class="">Specifies the alignment according to surrounding elements. Use CSS instead</td></tr><tr id="9b8cf5ef-ef51-49a9-9590-755893ab7696"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_alt.asp">alt</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies an alternate text when the original element fails to display</td></tr><tr id="b7c31162-027e-4b45-a839-d1f2bebe5d5e"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_async.asp">async</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></td><td id="eOH}" class="">Specifies that the script is executed asynchronously (only for external <br/>scripts)<br/></td></tr><tr id="885bdd3f-b8b4-4d0b-8e1a-a6d7092baff1"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_autocomplete.asp">autocomplete</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies whether the &lt;form&gt; or the &lt;input&gt; element should have autocomplete <br/>enabled<br/></td></tr><tr id="e8eee9c2-b467-4e49-8ea0-095450c81583"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_autofocus.asp">autofocus</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies that the element should automatically get focus when the page <br/>loads<br/></td></tr><tr id="c312172b-41a2-491b-a0af-545c1b583df0"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_autoplay.asp">autoplay</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies that the audio/video will start playing as soon as it is ready</td></tr><tr id="bcfe65d4-954d-41a4-8244-35ee0a37cb07"><td id="d?y_" class="">bgcolor</td><td id="_;]?" class="">Not supported in HTML 5.</td><td id="eOH}" class="">Specifies the background color of an element. Use CSS instead</td></tr><tr id="1593c0dd-7344-4a5e-8584-c38a7f5e38f4"><td id="d?y_" class="">border</td><td id="_;]?" class="">Not supported in HTML 5.</td><td id="eOH}" class="">Specifies the width of the border of an element. Use CSS instead</td></tr><tr id="3c44187b-9e86-496b-957b-890f8eaecd96"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_charset.asp">charset</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meta.asp">&lt;meta&gt;</a>, <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></td><td id="eOH}" class="">Specifies the character encoding</td></tr><tr id="5f2bdf92-e539-4f8f-b41a-5e80945ea33d"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_checked.asp">checked</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies that an &lt;input&gt; element should be pre-selected when the page loads <br/>(for type=&quot;checkbox&quot; or type=&quot;radio&quot;)<br/></td></tr><tr id="7c00fda3-76fb-4562-b6a3-e3a9b1d1af97"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_cite.asp">cite</a></td><td id="_;]?" class="">&lt;blockquote&gt;, <a href="https://www.w3schools.com/tags/tag_del.asp">&lt;del&gt;</a>, <a href="https://www.w3schools.com/tags/tag_ins.asp">&lt;ins&gt;</a>, &lt;q&gt;</td><td id="eOH}" class="">Specifies a URL which explains the quote/deleted/inserted text</td></tr><tr id="892e222b-f4eb-4481-8e61-eb8d29b34247"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_class.asp">class</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies one or more class names for an element (refers to a class in a <br/>style sheet)<br/></td></tr><tr id="8553f357-c3d3-4871-9e0e-93d654adf746"><td id="d?y_" class="">color</td><td id="_;]?" class="">Not supported in HTML 5.</td><td id="eOH}" class="">Specifies the text color of an element. Use CSS instead</td></tr><tr id="c398ed6d-dafc-40be-a82b-90d5c32246f7"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_cols.asp">cols</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies the visible width of a text area</td></tr><tr id="4a2822be-a8c9-4d19-ae7e-177827333bad"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_colspan.asp">colspan</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_td.asp">&lt;td&gt;</a>, <a href="https://www.w3schools.com/tags/tag_th.asp">&lt;th&gt;</a></td><td id="eOH}" class="">Specifies the number of columns a table cell should span</td></tr><tr id="9a812544-c8bd-4b08-8489-6b98f864859b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_content.asp">content</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meta.asp">&lt;meta&gt;</a></td><td id="eOH}" class="">Gives the value associated with the http-equiv or name attribute</td></tr><tr id="eb904cdb-3a59-4a53-94d7-c33ed22f50c6"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_contenteditable.asp">contenteditable</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies whether the content of an element is editable or not</td></tr><tr id="d8513d23-432b-42d3-9b45-d1c277b4947a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_controls.asp">controls</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies that audio/video controls should be displayed (such as a <br/>play/pause button etc.)<br/></td></tr><tr id="e574ac12-f22d-4246-a580-6a747e30f639"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_coords.asp">coords</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a></td><td id="eOH}" class="">Specifies the coordinates of the area</td></tr><tr id="62c90476-8e29-4d3f-8177-b43099896991"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_data.asp">data</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a></td><td id="eOH}" class="">Specifies the URL of the resource to be used by the object</td></tr><tr id="1058c928-723d-43bc-a7f3-8a42b58c2d52"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_data-.asp">data-*</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Used to store custom data private to the page or application</td></tr><tr id="50887235-52b9-4f74-886d-72c462ace794"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_datetime.asp">datetime</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_del.asp">&lt;del&gt;</a>, <a href="https://www.w3schools.com/tags/tag_ins.asp">&lt;ins&gt;</a>, <a href="https://www.w3schools.com/tags/tag_time.asp">&lt;time&gt;</a></td><td id="eOH}" class="">Specifies the date and time</td></tr><tr id="60e246ef-7036-40db-8499-8af005905fcf"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_default.asp">default</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a></td><td id="eOH}" class="">Specifies that the track is to be enabled if the user&#x27;s preferences do not <br/>indicate that another track would be more appropriate<br/></td></tr><tr id="2a417dbb-92e2-475c-809f-1d75f7c538fc"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_defer.asp">defer</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a></td><td id="eOH}" class="">Specifies that the script is executed when the page has finished parsing <br/>(only for external scripts)<br/></td></tr><tr id="e53c6473-d26f-476c-86e1-55a8dbb3d39c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_dir.asp">dir</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies the text direction for the content in an element</td></tr><tr id="c05500a2-0be3-40d9-a5e8-2294b3a7442e"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_dirname.asp">dirname</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies that the text direction will be submitted</td></tr><tr id="d2c7738f-c513-4e52-8bc3-a656d0548cba"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_disabled.asp">disabled</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, &lt;optgroup&gt;, <a href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies that the specified element/group of elements should be disabled</td></tr><tr id="b4204d38-d221-4565-ad26-5d6c0066b6f0"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_download.asp">download</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a></td><td id="eOH}" class="">Specifies that the target will be downloaded when a user clicks on the <br/>hyperlink<br/></td></tr><tr id="f93c251f-d8c8-4437-bb54-6ce754062424"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_draggable.asp">draggable</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies whether an element is draggable or not</td></tr><tr id="5cacc0b6-e0e2-434b-b5ef-9432c24c1774"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_enctype.asp">enctype</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies how the form-data should be encoded when submitting it to the <br/>server (only for method=&quot;post&quot;)<br/></td></tr><tr id="7fa43f4f-85c5-4c10-9f08-63cdc11db091"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_enterkeyhint.asp">enterkeyhint</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies the text of the enter-key on a virtual keyboard</td></tr><tr id="199418e4-f5cc-436b-8d08-1aa95a31d5bb"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_for.asp">for</a></td><td id="_;]?" class="">&lt;label&gt;, <a href="https://www.w3schools.com/tags/tag_output.asp">&lt;output&gt;</a></td><td id="eOH}" class="">Specifies which form element(s) a label/calculation is bound to</td></tr><tr id="d70a3eb1-492d-4610-b72b-13e69507fc24"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_form.asp">form</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, &lt;label&gt;, <a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_output.asp">&lt;output&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies the name of the form the element belongs to</td></tr><tr id="67337e6e-ac79-46f3-81c3-b7fdd34c7f63"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_formaction.asp">formaction</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies where to send the form-data when a form is submitted. Only for <br/>type=&quot;submit&quot;<br/></td></tr><tr id="8a89f061-750d-4abb-94b9-b3f132ba35e4"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_headers.asp">headers</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_td.asp">&lt;td&gt;</a>, <a href="https://www.w3schools.com/tags/tag_th.asp">&lt;th&gt;</a></td><td id="eOH}" class="">Specifies one or more headers cells a cell is related to</td></tr><tr id="ae956380-653e-4f19-b76d-f6eae62e8c80"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_height.asp">height</a></td><td id="_;]?" class="">&lt;canvas&gt;, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies the height of the element</td></tr><tr id="b6689e45-55be-4076-93fb-0590e2d7d84b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_hidden.asp">hidden</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies that an element is not yet, or is no longer, relevant</td></tr><tr id="4c8fe54c-1417-4e5f-b09c-764de4fc4144"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_high.asp">high</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a></td><td id="eOH}" class="">Specifies the range that is considered to be a high value</td></tr><tr id="688db732-a531-4b5f-85af-8aaa69d82c4d"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_href.asp">href</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <a href="https://www.w3schools.com/tags/tag_base.asp">&lt;base&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a></td><td id="eOH}" class="">Specifies the URL of the page the link goes to</td></tr><tr id="cec2199b-4357-47f4-af53-0a5567ca1ed5"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_hreflang.asp">hreflang</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a></td><td id="eOH}" class="">Specifies the language of the linked document</td></tr><tr id="55b89c53-49d5-4984-a44f-d211cce4849c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_http-equiv.asp">http-equiv</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meta.asp">&lt;meta&gt;</a></td><td id="eOH}" class="">Provides an HTTP header for the information/value of the content attribute</td></tr><tr id="e1528ea5-6dd8-435b-a895-368d102ab49e"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_id.asp">id</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies a unique id for an element</td></tr><tr id="b6aca65c-28ad-4eae-8f1e-d079671ef6c9"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_inert.asp">inert</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies that the browser should ignore this section</td></tr><tr id="b7665fef-5092-47dd-884b-5a2454dfccb3"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_inputmode.asp">inputmode</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies the mode of a virtual keyboard</td></tr><tr id="cded4f87-db1a-4b3b-8d34-7980c4fc8f02"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ismap.asp">ismap</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a></td><td id="eOH}" class="">Specifies an image as a server-side image map</td></tr><tr id="f742a916-a61d-4f23-9cd3-89318e84481e"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_kind.asp">kind</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a></td><td id="eOH}" class="">Specifies the kind of text track</td></tr><tr id="5e71c820-0e99-4f3b-adcc-9068fbf38125"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_label.asp">label</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a>, <a href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a>, <a href="https://www.w3schools.com/tags/tag_optgroup.asp">&lt;optgroup&gt;</a></td><td id="eOH}" class="">Specifies the title of the text track</td></tr><tr id="dea12b07-b1cc-48af-a5f7-ccaa0b845688"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_lang.asp">lang</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies the language of the element&#x27;s content</td></tr><tr id="2da4e85f-072c-4838-b425-83f874c02192"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_list.asp">list</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Refers to a &lt;datalist&gt; element that contains pre-defined options for an &lt;input&gt; <br/>element<br/></td></tr><tr id="bf574520-715c-4ab6-9fa6-374ffdfb8083"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_loop.asp">loop</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies that the audio/video will start over again, every time it is <br/>finished<br/></td></tr><tr id="060ec68e-025b-43d5-9263-aeb786c8c84a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_low.asp">low</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a></td><td id="eOH}" class="">Specifies the range that is considered to be a low value</td></tr><tr id="36e51293-ab1c-4d29-a406-43412433bd40"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_max.asp">max</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a>, <a href="https://www.w3schools.com/tags/tag_progress.asp">&lt;progress&gt;</a></td><td id="eOH}" class="">Specifies the maximum value</td></tr><tr id="8139f092-6616-4c17-82a4-c06ddf3f7ce7"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_maxlength.asp">maxlength</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies the maximum number of characters allowed in an element</td></tr><tr id="c47435af-029d-4b66-a7cd-da0fd5128b60"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_media.asp">media</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a>, <a href="https://www.w3schools.com/tags/tag_source.asp">&lt;source&gt;</a>, <a href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></td><td id="eOH}" class="">Specifies what media/device the linked document is optimized for</td></tr><tr id="ff2c42f9-601e-4304-8b72-21282a66324b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_method.asp">method</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies the HTTP method to use when sending form-data</td></tr><tr id="6f31ec50-619b-4d3c-8ed8-c3c7782c2bbd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_min.asp">min</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a></td><td id="eOH}" class="">Specifies a minimum value</td></tr><tr id="b0cd7618-1709-4e2d-901a-334e25e239fa"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_multiple.asp">multiple</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a></td><td id="eOH}" class="">Specifies that a user can enter more than one value</td></tr><tr id="e73e3f77-a4f3-41c3-97af-efc7bfae98f9"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_muted.asp">muted</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a>, <a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a></td><td id="eOH}" class="">Specifies that the audio output of the video should be muted</td></tr><tr id="06ab4371-809c-4d59-8fe7-9e0ac2a7b48b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_name.asp">name</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a>, <a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a>, <a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_map.asp">&lt;map&gt;</a>, <a href="https://www.w3schools.com/tags/tag_meta.asp">&lt;meta&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_output.asp">&lt;output&gt;</a>, <a href="https://www.w3schools.com/tags/tag_param.asp">&lt;param&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies the name of the element</td></tr><tr id="87cc6d6c-79e4-43b1-a47f-4a8180094392"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_novalidate.asp">novalidate</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies that the form should not be validated when submitted</td></tr><tr id="c1ec6c18-851a-4083-af98-37cf5aae6cea"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onabort.asp">onabort</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run on abort</td></tr><tr id="b156b286-ba4c-45c5-a063-b8a03cd2eeee"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onafterprint.asp">onafterprint</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run after the document is printed</td></tr><tr id="f9288b27-12cb-423f-a8d1-9d8d939573ad"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onbeforeprint.asp">onbeforeprint</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run before the document is printed</td></tr><tr id="4e08bccc-f3da-4dc2-a49e-bace38e91d32"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onbeforeunload.asp">onbeforeunload</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when the document is about to be unloaded</td></tr><tr id="43b17201-5c07-4527-8484-8e660f98dfaa"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onblur.asp">onblur</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element loses focus</td></tr><tr id="e55cf9f9-f4c0-4744-9276-690b43cb55ee"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncanplay.asp">oncanplay</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when a file is ready to start playing (when it has buffered <br/>enough to begin)<br/></td></tr><tr id="5d479520-a4e4-40d6-8a91-cfb492fb376b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncanplaythrough.asp">oncanplaythrough</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when a file can be played all the way to the end without <br/>pausing for buffering<br/></td></tr><tr id="4b4e9ddc-b85a-447c-ac2d-7a59be06a7b0"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onchange.asp">onchange</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the value of the element is changed</td></tr><tr id="d1000854-4b50-4e12-a308-c8fa46828ce8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onclick.asp">onclick</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element is being clicked</td></tr><tr id="f41d96ab-527b-416c-bd79-8dd44ff63680"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncontextmenu.asp">oncontextmenu</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a context menu is triggered</td></tr><tr id="fa83d0bc-84f2-4d27-8233-d47681388717"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncopy.asp">oncopy</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the content of the element is being copied</td></tr><tr id="e4dbeee3-fb6f-486c-a8ff-20333e3be604"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncuechange.asp">oncuechange</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a></td><td id="eOH}" class="">Script to be run when the cue changes in a <a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a> element</td></tr><tr id="7210f576-6e7d-4bdf-b5f6-26f93f7dc96a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oncut.asp">oncut</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the content of the element is being cut</td></tr><tr id="8258b5f5-60b8-4619-9bb7-3404c458d6a8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondblclick.asp">ondblclick</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element is being double-clicked</td></tr><tr id="29a96775-c8f8-4f5d-822c-6e61436e8e81"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondrag.asp">ondrag</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element is being dragged</td></tr><tr id="2e96f9d0-b49c-40ce-a06f-97d8899f2168"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondragend.asp">ondragend</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run at the end of a drag operation</td></tr><tr id="ecfa515f-620d-410f-9f22-9937a249b74c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondragenter.asp">ondragenter</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when an element has been dragged to a valid drop target</td></tr><tr id="a68c012f-7a73-4074-8b86-9e6c0f3bbb66"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondragleave.asp">ondragleave</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when an element leaves a valid drop target</td></tr><tr id="86ad44e2-8b0c-46fd-a6da-81479de14ec9"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondragover.asp">ondragover</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when an element is being dragged over a valid drop target</td></tr><tr id="541ee4e8-70f0-4b8e-aec5-1ecb1483a976"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondragstart.asp">ondragstart</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run at the start of a drag operation</td></tr><tr id="a3aa0034-5afe-43c0-8500-e6883656f8dd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondrop.asp">ondrop</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when dragged element is being dropped</td></tr><tr id="dc6aca59-ccb6-4c81-aa65-3fe512ce531b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ondurationchange.asp">ondurationchange</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the length of the media changes</td></tr><tr id="49d304b0-4774-4a57-bee3-35260d49d5da"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onemptied.asp">onemptied</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when something bad happens and the file is suddenly <br/>unavailable (like unexpectedly disconnects)<br/></td></tr><tr id="5393653c-ad24-4b36-8efd-1102a8d43758"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onended.asp">onended</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the media has reach the end (a useful event for <br/>messages like &quot;thanks for listening&quot;)<br/></td></tr><tr id="dd1fcaea-f266-4319-8064-f4fcaddd44a5"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onerror.asp">onerror</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a>, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a>, <a href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when an error occurs</td></tr><tr id="cae79441-916a-40d3-8cb3-44d9a9c1672a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onfocus.asp">onfocus</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element gets focus</td></tr><tr id="30112c19-94f2-4415-b37d-bfdd3ea5eb4b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onhashchange.asp">onhashchange</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when there has been changes to the anchor part of the a URL</td></tr><tr id="e0ce334f-af9d-4f3f-a3ab-046a18d512e6"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oninput.asp">oninput</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element gets user input</td></tr><tr id="5793a70f-7f0c-4779-8ec7-7632088f75aa"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_oninvalid.asp">oninvalid</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element is invalid</td></tr><tr id="26078096-f9d8-4e59-bf8f-81c52bf2bb91"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onkeydown.asp">onkeydown</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a user is pressing a key</td></tr><tr id="3d953dd0-90e7-4136-94c5-4be7e48941ce"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onkeypress.asp">onkeypress</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a user presses a key</td></tr><tr id="66f383c0-962f-4ba9-8e86-fcfda3cfc45c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onkeyup.asp">onkeyup</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a user releases a key</td></tr><tr id="07287e86-fa10-4c04-96ba-e32acac20674"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onload.asp">onload</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a>, <a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a>, <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a>, <a href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></td><td id="eOH}" class="">Script to be run when the element is finished loading</td></tr><tr id="30b95007-4718-4417-981f-db2af4cd5cd1"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onloadeddata.asp">onloadeddata</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when media data is loaded</td></tr><tr id="93396ac9-8e44-46bf-836a-cd27de5d75a9"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onloadedmetadata.asp">onloadedmetadata</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when meta data (like dimensions and duration) are loaded</td></tr><tr id="6baee45a-0d23-4ef7-8ad0-08b04547a261"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onloadstart.asp">onloadstart</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run just as the file begins to load before anything is actually <br/>loaded<br/></td></tr><tr id="30991c3c-eee3-4943-a385-73f089d1b864"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmousedown.asp">onmousedown</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a mouse button is pressed down on an element</td></tr><tr id="10aca474-9dc4-4c05-9fe4-b4d48c14889b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmousemove.asp">onmousemove</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run as long as the  mouse pointer is moving over an element</td></tr><tr id="a088ab0b-9039-449d-98f3-616df71f43db"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmouseout.asp">onmouseout</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a mouse pointer moves out of an element</td></tr><tr id="b6a8dd5f-67ba-4499-a851-6bebfe82e2ee"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmouseover.asp">onmouseover</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a mouse pointer moves over an element</td></tr><tr id="4fa7e568-995b-4d39-8db3-a2d3adb7dade"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmouseup.asp">onmouseup</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a mouse button is released over an element</td></tr><tr id="38333af6-6035-4dc9-99ff-65eea1e6b701"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onmousewheel.asp">onmousewheel</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when a mouse wheel is being scrolled over an element</td></tr><tr id="d29fc305-7e78-422e-8f1b-758feee7068a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onoffline.asp">onoffline</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when the browser starts to work offline</td></tr><tr id="7f3fe774-208f-43c8-87cf-987a3317f5be"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ononline.asp">ononline</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when the browser starts to work online</td></tr><tr id="e3f45a38-0a3e-41d8-9d26-f31044760a9d"><td id="d?y_" class="">onpagehide</td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when a user navigates away from a page</td></tr><tr id="03e9182b-1255-4870-bd98-fb06f1269acf"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onpageshow.asp">onpageshow</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when a user navigates to a page</td></tr><tr id="92473d8b-52c6-41a3-b48f-5e45190876b8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onpaste.asp">onpaste</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the user pastes some content in an element</td></tr><tr id="36a6d8a9-7d14-4ea2-a9ef-f6940059064f"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onpause.asp">onpause</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the media is paused either by the user or <br/>programmatically<br/></td></tr><tr id="a03952d9-86a7-4e40-8228-b7c83a58858c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onplay.asp">onplay</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the media has started playing</td></tr><tr id="7d28fb2b-361f-41c9-bd92-e13548f0c244"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onplaying.asp">onplaying</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the media has started playing</td></tr><tr id="ac06b99c-0558-4302-b1f5-ea635bffc501"><td id="d?y_" class="">onpopstate</td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when the window&#x27;s history changes.</td></tr><tr id="c3fb8b86-aae0-41d6-b799-b64ca5e7c07f"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onprogress.asp">onprogress</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the browser is in the process of getting the media <br/>data<br/></td></tr><tr id="eb070c62-1df2-4d2c-b893-7ba88f0e8e8b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onratechange.asp">onratechange</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run each time the playback rate changes (like when a user <br/>switches to a slow motion or fast forward mode).<br/></td></tr><tr id="5509f691-f4db-4555-87d3-9ec13dbbd71b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onreset.asp">onreset</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Script to be run when a reset button in a form is clicked.</td></tr><tr id="5c95875a-54fd-43ce-8bec-e089aa5b2e2c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onresize.asp">onresize</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when the browser window is being resized.</td></tr><tr id="82cda8c0-fb73-41a2-b412-b212ba46df9a"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onscroll.asp">onscroll</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when an element&#x27;s scrollbar is being scrolled</td></tr><tr id="ecf80fa6-a418-430d-85a4-8086ec766d01"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onsearch.asp">onsearch</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Script to be run when the user writes something in a search field (for <br/>&lt;input type=&quot;search&quot;&gt;)<br/></td></tr><tr id="4a13973d-8e34-4cfe-9a2b-0786bfc31d02"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onseeked.asp">onseeked</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the seeking attribute is set to false indicating that <br/>seeking has ended<br/></td></tr><tr id="27e792b6-4f00-4ac0-ba17-d74d843429d7"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onseeking.asp">onseeking</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the seeking attribute is set to true indicating that <br/>seeking is active<br/></td></tr><tr id="153ae38d-95c7-440d-982a-76c483510bf2"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onselect.asp">onselect</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the element gets selected</td></tr><tr id="e699a0aa-f048-42b4-85e7-94de84bcc4b8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onstalled.asp">onstalled</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the browser is unable to fetch the media data for <br/>whatever reason<br/></td></tr><tr id="16b7d3c5-e3f5-4f64-b04c-c9d2b01e04e1"><td id="d?y_" class="">onstorage</td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when a Web Storage area is updated</td></tr><tr id="37c22781-887f-4796-acc2-bc8c734d6719"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onsubmit.asp">onsubmit</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Script to be run when a form is submitted</td></tr><tr id="e3cd03a7-c065-402c-b959-8a9d9f137405"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onsuspend.asp">onsuspend</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when fetching the media data is stopped before it is <br/>completely loaded for whatever reason<br/></td></tr><tr id="ab190cee-0c3f-4978-9624-47738b31c8fd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ontimeupdate.asp">ontimeupdate</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the playing position has changed (like when the user <br/>fast forwards to a different point in the media)<br/></td></tr><tr id="a2c22e8b-1918-4aec-bf8b-5139467931ba"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_ontoggle.asp">ontoggle</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_details.asp">&lt;details&gt;</a></td><td id="eOH}" class="">Script to be run when the user opens or closes the &lt;details&gt; element</td></tr><tr id="aed4044f-df84-4819-b94b-613b7f2c0b29"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onunload.asp">onunload</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_body.asp">&lt;body&gt;</a></td><td id="eOH}" class="">Script to be run when a page has unloaded (or the browser window has been <br/>closed)<br/></td></tr><tr id="5a42d440-460c-4737-8ed0-d03b22a807f8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onvolumechange.asp">onvolumechange</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run each time the volume of a video/audio has been changed</td></tr><tr id="0c41a530-302c-48f3-9c04-11dddcb0e938"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onwaiting.asp">onwaiting</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Script to be run when the media has paused but is expected to resume (like <br/>when the media pauses to buffer more data)<br/></td></tr><tr id="2fe749cb-5194-46ee-ad78-3cab464d0fed"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_onwheel.asp">onwheel</a></td><td id="_;]?" class="">All visible elements.</td><td id="eOH}" class="">Script to be run when the mouse wheel rolls up or down over an element</td></tr><tr id="d7af36af-6353-446f-a91b-5ab15347c67c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_open.asp">open</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_details.asp">&lt;details&gt;</a></td><td id="eOH}" class="">Specifies that the details should be visible (open) to the user</td></tr><tr id="97aa28bb-5ac6-4ad2-8136-a5e78ddfc0dd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_optimum.asp">optimum</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a></td><td id="eOH}" class="">Specifies what value is the optimal value for the gauge</td></tr><tr id="434e2e42-a6ef-4097-b927-501c2eeb5954"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_pattern.asp">pattern</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies a regular expression that an &lt;input&gt; element&#x27;s value is checked <br/>against<br/></td></tr><tr id="2423d033-28c9-43bb-bc9d-6f7bf356c171"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_placeholder.asp">placeholder</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies a short hint that describes the expected value of the element</td></tr><tr id="6574107c-9533-435f-8897-30344d820502"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_popover.asp">popover</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies a popover element</td></tr><tr id="1b0d8859-fd67-4dbd-a7e0-77a37aa4e4f0"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_popovertarget.asp">popovertarget</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies which popover element to invoked</td></tr><tr id="fe26d8b7-0451-49c3-a746-a00215c86c50"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_popovertargetaction.asp">popovertargetaction</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies what happens to the popover element when the button is clicked</td></tr><tr id="196e952b-9aba-4145-86d6-0012f24188e4"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_poster.asp">poster</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies an image to be shown while the video is downloading, or until the <br/>user hits the play button<br/></td></tr><tr id="16ab4b08-5b51-4c79-9deb-59dae759d0dd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_preload.asp">preload</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies if and how the author thinks the audio/video should be loaded when <br/>the page loads<br/></td></tr><tr id="02835f6c-1163-4841-bed9-9e93cd02a092"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_readonly.asp">readonly</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies that the element is read-only</td></tr><tr id="7cf7ba76-4777-49f5-b733-90db222e69b9"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_rel.asp">rel</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a></td><td id="eOH}" class="">Specifies the relationship between the current document and the linked <br/>document<br/></td></tr><tr id="15b52eb4-c998-45e2-b4b8-94acb25dd2f0"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_required.asp">required</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>, <a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies that the element must be filled out before submitting the form</td></tr><tr id="2e911ed6-b4de-496b-9a2c-4cd9fdaa31c2"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_reversed.asp">reversed</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_ol.asp">&lt;ol&gt;</a></td><td id="eOH}" class="">Specifies that the list order should be descending (9,8,7...)</td></tr><tr id="8240a27d-4353-4246-9aa4-82f11dcd503b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_rows.asp">rows</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies the visible number of lines in a text area</td></tr><tr id="774ab5fe-3fa2-4d1f-b789-ee7cc3edd41c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_rowspan.asp">rowspan</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_td.asp">&lt;td&gt;</a>, <a href="https://www.w3schools.com/tags/tag_th.asp">&lt;th&gt;</a></td><td id="eOH}" class="">Specifies the number of rows a table cell should span</td></tr><tr id="73b77f92-4ea1-47ca-84cc-dfe0412318fd"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_sandbox.asp">sandbox</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a></td><td id="eOH}" class="">Enables an extra set of restrictions for the content in an &lt;iframe&gt;</td></tr><tr id="8bbd4ee8-328a-42a7-b7fc-61808b870b7b"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_scope.asp">scope</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_th.asp">&lt;th&gt;</a></td><td id="eOH}" class="">Specifies whether a header cell is a header for a column, row, or group of <br/>columns or rows<br/></td></tr><tr id="bc8d175e-de6b-494c-8daf-65ba4c494f0c"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_selected.asp">selected</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a></td><td id="eOH}" class="">Specifies that an option should be pre-selected when the page loads</td></tr><tr id="aceccb2d-cd89-49b1-aed6-7ce01841d411"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_shape.asp">shape</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a></td><td id="eOH}" class="">Specifies the shape of the area</td></tr><tr id="2b2ab9fc-4be7-4c35-b0ea-8624c796400e"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_size.asp">size</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a></td><td id="eOH}" class="">Specifies the width, in characters (for &lt;input&gt;) or specifies the number of <br/>visible options (for &lt;select&gt;)<br/></td></tr><tr id="38e64745-44fa-4691-8fbf-d1258ad40940"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_sizes.asp">sizes</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a>,<br/><br/><a href="https://www.w3schools.com/tags/tag_source.asp">&lt;source&gt;</a></td><td id="eOH}" class="">Specifies the size of the linked resource</td></tr><tr id="a09881b9-79d1-4ffa-aa4d-1f4541d5c211"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_span.asp">span</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_col.asp">&lt;col&gt;</a>, <a href="https://www.w3schools.com/tags/tag_colgroup.asp">&lt;colgroup&gt;</a></td><td id="eOH}" class="">Specifies the number of columns to span</td></tr><tr id="5beb9f02-d380-4d60-bd79-2b51929bbb64"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_spellcheck.asp">spellcheck</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies whether the element is to have its spelling and grammar checked or <br/>not<br/></td></tr><tr id="62faa676-9f30-4c04-ae73-4943ff7610a7"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_src.asp">src</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_audio.asp">&lt;audio&gt;</a>, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a>, <a href="https://www.w3schools.com/tags/tag_source.asp">&lt;source&gt;</a>, <a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies the URL of the media file</td></tr><tr id="6919c6ae-537f-45d6-8d3a-cd8939186ef2"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_srcdoc.asp">srcdoc</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a></td><td id="eOH}" class="">Specifies the HTML content of the page to show in the &lt;iframe&gt;</td></tr><tr id="1840457a-a5e1-4022-9504-203a18ab60d4"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_srclang.asp">srclang</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_track.asp">&lt;track&gt;</a></td><td id="eOH}" class="">Specifies the language of the track text data (required if kind=&quot;subtitles&quot;)</td></tr><tr id="2774ed97-673a-429d-b29d-b600b2e38b01"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_source_srcset.asp">srcset</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_source.asp">&lt;source&gt;</a></td><td id="eOH}" class="">Specifies the URL of the image to use in different situations</td></tr><tr id="193acf20-2bab-4764-b475-a34e4f975cf1"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_start.asp">start</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_ol.asp">&lt;ol&gt;</a></td><td id="eOH}" class="">Specifies the start value of an ordered list</td></tr><tr id="26a45327-807a-4c98-9ff1-f6c81ba013d6"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_step.asp">step</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a></td><td id="eOH}" class="">Specifies the legal number intervals for an input field</td></tr><tr id="09759e4b-e2f7-432d-b6f9-bde9486678b7"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_style.asp">style</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies an inline CSS style for an element</td></tr><tr id="713b4b77-dd21-48e1-8e3d-31a2764a8195"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_tabindex.asp">tabindex</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies the tabbing order of an element</td></tr><tr id="707f0696-138e-4a34-bdb6-a35181e174aa"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_target.asp">target</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_area.asp">&lt;area&gt;</a>, <a href="https://www.w3schools.com/tags/tag_base.asp">&lt;base&gt;</a>, <a href="https://www.w3schools.com/tags/tag_form.asp">&lt;form&gt;</a></td><td id="eOH}" class="">Specifies the target for where to open the linked document or where to <br/>submit the form<br/></td></tr><tr id="98db048d-3737-4442-a416-f7b489f68212"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_title.asp">title</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies extra information about an element</td></tr><tr id="3f5aee23-1aba-4f47-bf2c-e40dc45b7ca5"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_translate.asp">translate</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/ref_standardattributes.asp">Global Attributes</a></td><td id="eOH}" class="">Specifies whether the content of an element should be translated or not</td></tr><tr id="1f76092b-3e34-41e9-bb0d-a0cce559c7d8"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_type.asp">type</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_a.asp">&lt;a&gt;</a>, <a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link&gt;</a>, <a href="https://www.w3schools.com/tags/tag_menu.asp">&lt;menu&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_source.asp">&lt;source&gt;</a>, <a href="https://www.w3schools.com/tags/tag_style.asp">&lt;style&gt;</a></td><td id="eOH}" class="">Specifies the type of element</td></tr><tr id="5dd1c46d-fed3-4319-93b5-a887afe350c4"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_usemap.asp">usemap</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a></td><td id="eOH}" class="">Specifies an image as a client-side image map</td></tr><tr id="b5f1f290-6611-4453-b816-c471ad734d82"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_value.asp">value</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_li.asp">&lt;li&gt;</a>, <a href="https://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a>, <br/><br/><a href="https://www.w3schools.com/tags/tag_meter.asp">&lt;meter&gt;</a>, <a href="https://www.w3schools.com/tags/tag_progress.asp">&lt;progress&gt;</a>, <a href="https://www.w3schools.com/tags/tag_param.asp">&lt;param&gt;</a></td><td id="eOH}" class="">Specifies the value of the element</td></tr><tr id="d3009f55-ad16-4d2c-b84f-d9e370f6f6ea"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_width.asp">width</a></td><td id="_;]?" class="">&lt;canvas&gt;, <a href="https://www.w3schools.com/tags/tag_embed.asp">&lt;embed&gt;</a>, <a href="https://www.w3schools.com/tags/tag_iframe.asp">&lt;iframe&gt;</a>, <a href="https://www.w3schools.com/tags/tag_img.asp">&lt;img&gt;</a>, <a href="https://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>, <a href="https://www.w3schools.com/tags/tag_object.asp">&lt;object&gt;</a>, <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a></td><td id="eOH}" class="">Specifies the width of the element</td></tr><tr id="9e2e5f80-839d-4a43-93bb-3d4953e203c2"><td id="d?y_" class=""><a href="https://www.w3schools.com/tags/att_wrap.asp">wrap</a></td><td id="_;]?" class=""><a href="https://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a></td><td id="eOH}" class="">Specifies how the text in a text area is to be wrapped when submitted in a <br/>form<br/></td></tr></tbody></table><h2 id="289a24c6-fd9f-4f45-816e-c8987676c33c" class="">HTML Global Attributes</h2><p id="4e82d0f6-e0e3-4839-9666-3b790c38be68" class="">The global attributes are attributes that can be used with all HTML elements.</p><table id="435762f8-0a8f-49b1-9d77-289bb827343a" class="simple-table"><tbody><tr id="87716b99-d6ed-4fd7-9511-a006373ec3d1"><td id="b?Q=" class="">Attribute</td><td id="K@Ct" class="">Description</td></tr><tr id="244928e7-3ead-4c71-9794-aba8fa771127"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_accesskey.asp">accesskey</a></td><td id="K@Ct" class="">Specifies a shortcut key to activate/focus an element</td></tr><tr id="6cfd3027-efb8-4a5b-ac82-dcbd82860d0e"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_class.asp">class</a></td><td id="K@Ct" class="">Specifies one or more classnames for an element (refers to a class in a style sheet)</td></tr><tr id="4c648998-b985-4d6b-b5dd-e161d786fd13"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_contenteditable.asp">contenteditable</a></td><td id="K@Ct" class="">Specifies whether the content <br/>of an element is editable or not<br/></td></tr><tr id="f5702667-123c-4929-9fa9-76eb2bcaf123"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_data.asp">data-*</a></td><td id="K@Ct" class="">Used to store custom data private to the page or application</td></tr><tr id="9804ef7e-1567-41d7-a5ba-d28f877fe333"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_dir.asp">dir</a></td><td id="K@Ct" class="">Specifies the text direction for the content in an element</td></tr><tr id="653c2620-18cf-4af1-b8f7-eba96ef54bfa"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_draggable.asp">draggable</a></td><td id="K@Ct" class="">Specifies whether an element is draggable or not</td></tr><tr id="e42c489d-4358-450f-a848-e036f0b02924"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_enterkeyhint.asp">enterkeyhint</a></td><td id="K@Ct" class="">Specifies the text of the enter-key on a virtual keybord</td></tr><tr id="dcb0c3c2-39d9-41b4-a3c5-ee5636dbf1d3"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_hidden.asp">hidden</a></td><td id="K@Ct" class="">Specifies that an element is not yet, or is no longer, relevant</td></tr><tr id="804939ef-1f83-43a7-bc2f-26824feaf107"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_id.asp">id</a></td><td id="K@Ct" class="">Specifies a unique id for an element</td></tr><tr id="64b53fd5-1268-458b-a6de-27bea1a18e98"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_inert.asp">inert</a></td><td id="K@Ct" class="">Specifies that the browser should ignore this section</td></tr><tr id="e6e5065c-bb9e-4363-b27e-f0d0dc1fbe25"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_inputmode.asp">inputmode</a></td><td id="K@Ct" class="">Specifies the mode of a virtual keyboard</td></tr><tr id="c69ad88f-a3c0-45f6-baee-38cfbaff7e66"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_lang.asp">lang</a></td><td id="K@Ct" class="">Specifies the language of the element&#x27;s content</td></tr><tr id="6f32ab6b-5143-41df-9c5d-be168c2d4bba"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_popover.asp">popover</a></td><td id="K@Ct" class="">Specifies a popover element</td></tr><tr id="0db86898-d2db-4c8c-b467-a4528c4ca973"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_spellcheck.asp">spellcheck</a></td><td id="K@Ct" class="">Specifies whether the element is to have its spelling and grammar checked or <br/>not<br/></td></tr><tr id="df53c7de-d09d-4c93-aa6c-ad5efff78b0e"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_style.asp">style</a></td><td id="K@Ct" class="">Specifies an inline CSS style for an element</td></tr><tr id="c8f3a14b-1784-4fb6-a3fc-3a14a5c24841"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_tabindex.asp">tabindex</a></td><td id="K@Ct" class="">Specifies the tabbing order of an element</td></tr><tr id="687dabb8-c64b-48b0-9cdd-142adefc4808"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_title.asp">title</a></td><td id="K@Ct" class="">Specifies extra information about an element</td></tr><tr id="1ef51513-47c1-4622-8783-291e4add9363"><td id="b?Q=" class=""><a href="https://www.w3schools.com/tags/att_global_translate.asp">translate</a></td><td id="K@Ct" class="">Specifies whether the content of an element should be translated or not</td></tr></tbody></table><p id="ba738e21-e3dc-41de-9940-950c0ba881a3" class="">
+</p><h2 id="104d995d-e21f-4922-bc62-7053a4bb07d1" class="">Global Event Attributes</h2><p id="c1bb1396-5f85-4c52-a334-fb8fa06c2ad2" class="">HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when a user clicks on an element.</p><p id="6901d952-b07c-46ce-93e9-d51303487ddd" class="">To learn more about programming events, please visit our <a href="https://www.w3schools.com/js/default.asp">JavaScript tutorial</a>.</p><p id="7428b5a1-892d-4e0c-88b2-7c842f0bc8ef" class="">Below are the global event attributes that can be added to HTML elements to define event actions.</p><hr id="54065b4e-2d4b-4d08-8f93-1f9e4f28f1fe"/><h2 id="2e7a6e42-9186-45cd-b23f-b29261ffe809" class="">Window Event Attributes</h2><p id="43872c54-e1bf-4b3b-8892-2a1439324e59" class="">Events triggered for the window object (applies to the &lt;body&gt; tag):</p><table id="a55c7515-0ac7-4a92-8295-6d786029fe6e" class="simple-table"><tbody><tr id="cf9ac302-de6c-4f26-8b21-4e6a5f4e2e49"><td id="JevC" class="">Attribute</td><td id="wJLf" class="">Value</td><td id="n`;&lt;" class="">Description</td></tr><tr id="00ac8d2e-a970-47c7-9c75-10e5c3fe5ec0"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onafterprint.asp">onafterprint</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run after the document is printed</td></tr><tr id="1387e01f-f160-4d58-86f4-8ed5f0b643cb"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onbeforeprint.asp">onbeforeprint</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run before the document is printed</td></tr><tr id="e7d226f9-2306-4851-a15e-70b715782115"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onbeforeunload.asp">onbeforeunload</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when the document is about to be unloaded</td></tr><tr id="5edd6756-f777-4b61-ac62-b1ee418e44c3"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onerror.asp">onerror</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when an error occurs</td></tr><tr id="962db6e5-01a9-4618-9e0a-aec68ea3826d"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onhashchange.asp">onhashchange</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when there has been changes to the anchor part of the a URL</td></tr><tr id="e5e79d6b-4a50-4968-896a-99d868da8dee"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onload.asp">onload</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Fires after the page is finished loading</td></tr><tr id="0c073d5e-77ff-49cf-99e3-8f05a3c6330e"><td id="JevC" class="">onmessage</td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when the message is triggered</td></tr><tr id="66fdd410-9e7e-45df-8ca5-489477faf14f"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onoffline.asp">onoffline</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when the browser starts to work offline</td></tr><tr id="721ab55f-8e8c-42fc-a9b0-c471ed579eda"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_ononline.asp">ononline</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when the browser starts to work online</td></tr><tr id="d1b22311-94ea-4885-95f3-e9a6809e4821"><td id="JevC" class="">onpagehide</td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when a user navigates away from a page</td></tr><tr id="98734584-ad1c-4462-8d6e-b2d1098a568b"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onpageshow.asp">onpageshow</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when a user navigates to a page</td></tr><tr id="40e272ba-ce61-46b9-8ac5-f43acc83f180"><td id="JevC" class="">onpopstate</td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when the window&#x27;s history changes</td></tr><tr id="07fc2f29-eb0c-4af9-bae7-1b232b099254"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onresize.asp">onresize</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Fires when the browser window is resized</td></tr><tr id="b9f2228c-86ee-4ada-b7ca-8fc47a876bb8"><td id="JevC" class="">onstorage</td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Script to be run when a Web Storage area is updated</td></tr><tr id="32c8c980-c918-4d21-8924-a303d907dcae"><td id="JevC" class=""><a href="https://www.w3schools.com/tags/ev_onunload.asp">onunload</a></td><td id="wJLf" class=""><em>script</em></td><td id="n`;&lt;" class="">Fires once a page has unloaded (or the browser window has been closed)</td></tr></tbody></table><hr id="219eabc3-109d-49e8-9766-89a9f237889a"/><hr id="118ea3e9-e3b2-458f-bc17-71ee744bd7e1"/><h2 id="2e4de191-def1-40b0-a5a3-54e7307ca52e" class="">Form Events</h2><p id="06ed5f91-d819-49cc-a26b-24bb1cf6c920" class="">Events triggered by actions inside a HTML form (applies to almost all HTML elements, but is most <br/>used in form elements):<br/></p><table id="b3dac5d7-9b02-4ea1-ab7b-fadd1f119a54" class="simple-table"><tbody><tr id="7796a7bd-d324-431f-a500-c6d2741b4be1"><td id="Q]Mb" class="">Attribute</td><td id="[Tem" class="">Value</td><td id="yBoc" class="">Description</td></tr><tr id="6a95cca5-573e-4d8b-8e1c-6f1cae946821"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onblur.asp">onblur</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires the moment that the element loses focus</td></tr><tr id="eb5b17ec-3acf-4349-8569-a933b758caa0"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onchange.asp">onchange</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires the moment when the value of the element is changed</td></tr><tr id="9df4bb0d-8443-4e26-8f8b-4f80dc0c70ad"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_oncontextmenu.asp">oncontextmenu</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Script to be run when a context menu is triggered</td></tr><tr id="7aa5f1a9-5415-4b4f-9523-ba5fbeaf2ee4"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onfocus.asp">onfocus</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires the moment when the element gets focus</td></tr><tr id="f7985322-d547-4625-a3ed-bb36650034b1"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_oninput.asp">oninput</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Script to be run when an element gets user input</td></tr><tr id="ee51ef6d-fae0-4aa8-87f9-f4ee2b4d44f5"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_oninvalid.asp">oninvalid</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Script to be run when an element is invalid</td></tr><tr id="d4b174af-f0fd-4488-8988-7108f3254732"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onreset.asp">onreset</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires when the Reset button in a form is clicked</td></tr><tr id="4d9a21bd-1c01-4e8a-b493-b82cde1c47f5"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onsearch.asp">onsearch</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires when the user writes something in a search field (for <br/>&lt;input=&quot;search&quot;&gt;)<br/></td></tr><tr id="79249ac2-1321-4fae-b3f0-31306d09f197"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onselect.asp">onselect</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires after some text has been selected in an element</td></tr><tr id="c585123b-cd98-4ce3-b754-6c9d047a7f6c"><td id="Q]Mb" class=""><a href="https://www.w3schools.com/tags/ev_onsubmit.asp">onsubmit</a></td><td id="[Tem" class=""><em>script</em></td><td id="yBoc" class="">Fires when a form is submitted</td></tr></tbody></table><hr id="b6e0c9cd-daa7-4b69-bbf6-917dfee29810"/><h2 id="0e719e90-cfc4-44ce-9c09-999d8a8ac7ec" class="">Keyboard Events</h2><table id="3722775a-b188-4e0c-87b0-58f6de40088d" class="simple-table"><tbody><tr id="dc97dc2d-02ae-4a1d-a68f-27d79cc82471"><td id="uvfl" class="">Attribute</td><td id="heVL" class="">Value</td><td id="bnHu" class="">Description</td></tr><tr id="9ef01f8b-0fc0-4af1-803c-861fbc5c8e90"><td id="uvfl" class=""><a href="https://www.w3schools.com/tags/ev_onkeydown.asp">onkeydown</a></td><td id="heVL" class=""><em>script</em></td><td id="bnHu" class="">Fires when a user is pressing a key</td></tr><tr id="4af9013c-9052-4c64-94f2-484176a79388"><td id="uvfl" class=""><a href="https://www.w3schools.com/tags/ev_onkeypress.asp">onkeypress</a></td><td id="heVL" class=""><em>script</em></td><td id="bnHu" class="">Fires when a user presses a key</td></tr><tr id="ad966ab9-d302-42e8-ada4-cd8f877519b6"><td id="uvfl" class=""><a href="https://www.w3schools.com/tags/ev_onkeyup.asp">onkeyup</a></td><td id="heVL" class=""><em>script</em></td><td id="bnHu" class="">Fires when a user releases a key</td></tr></tbody></table><hr id="b10c73b9-260b-49bf-b027-788cb82155af"/><h2 id="045bf247-592d-48a4-b95f-447a685a5d1c" class="">Mouse Events</h2><table id="54e2d54c-107d-491e-8d24-b5d9fe15b742" class="simple-table"><tbody><tr id="63c3fdfa-ddcb-4bd7-8505-65e2d3db566c"><td id="QbTe" class="">Attribute</td><td id="dDJN" class="">Value</td><td id="SYx^" class="">Description</td></tr><tr id="1cfa7710-fbe3-4a64-ab2e-09eeca67be72"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onclick.asp">onclick</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires on a mouse click on the element</td></tr><tr id="95712bbc-419d-4fd6-8dce-6e9503d1de76"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_ondblclick.asp">ondblclick</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires on a mouse double-click on the element</td></tr><tr id="756dcb23-9402-4684-8c91-a1cc8fc7ff65"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onmousedown.asp">onmousedown</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when a mouse button is pressed down on an element</td></tr><tr id="a0ba454f-0dfa-420e-af2d-76972f19f622"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onmousemove.asp">onmousemove</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when the mouse pointer is moving while it is over an element</td></tr><tr id="84536963-644e-4428-b5e9-b980996b058d"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onmouseout.asp">onmouseout</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when the mouse pointer moves out of an element</td></tr><tr id="2e2a3316-1c89-46a5-bd70-521d1c6c6696"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onmouseover.asp">onmouseover</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when the mouse pointer moves over an element</td></tr><tr id="a7bc717a-ad34-4357-8e91-eabd58f154e3"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onmouseup.asp">onmouseup</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when a mouse button is released over an element</td></tr><tr id="72295b6e-5dfd-40fe-b5e8-0dfe0a21e9dc"><td id="QbTe" class="">onmousewheel</td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Deprecated. Use the <a href="https://www.w3schools.com/tags/ev_onwheel.asp">onwheel</a> attribute instead</td></tr><tr id="73a35939-4feb-4dca-9bd6-570d93566f8e"><td id="QbTe" class=""><a href="https://www.w3schools.com/tags/ev_onwheel.asp">onwheel</a></td><td id="dDJN" class=""><em>script</em></td><td id="SYx^" class="">Fires when the mouse wheel rolls up or down over an element</td></tr></tbody></table><hr id="b50dc189-4c08-47c8-841d-ece2aff086ef"/><h2 id="1f5eee48-fdb8-4f88-8b02-f41807b00838" class="">Drag Events</h2><table id="5181cd72-73de-42a0-9e6e-cc43e597306a" class="simple-table"><tbody><tr id="c1bbccec-bd85-4e30-ba94-f00637fd471c"><td id="EhVc" class="">Attribute</td><td id="UtL}" class="">Value</td><td id="y|kM" class="">Description</td></tr><tr id="cacec73f-bfea-49ac-8d0a-8c3103dfd6fb"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondrag.asp">ondrag</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when an element is dragged</td></tr><tr id="a43e5266-26ce-4a20-97ac-a514d290489e"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondragend.asp">ondragend</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run at the end of a drag operation</td></tr><tr id="447d041a-fb2d-41ed-8672-32fcdb5f5007"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondragenter.asp">ondragenter</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when an element has been dragged to a valid drop target</td></tr><tr id="71fdd2af-a26b-4274-8596-678f9a4312c9"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondragleave.asp">ondragleave</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when an element leaves a valid drop target</td></tr><tr id="f2a5cf3b-b50b-4881-99ff-caccfd1a7d95"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondragover.asp">ondragover</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when an element is being dragged over a valid drop target</td></tr><tr id="0711a516-ba58-4bfa-a9e0-774e09da82f6"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondragstart.asp">ondragstart</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run at the start of a drag operation</td></tr><tr id="820e22b8-8172-4fbc-9ff7-4928231602f3"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_ondrop.asp">ondrop</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when dragged element is being dropped</td></tr><tr id="b835c3b2-34ac-44ef-937c-808f7048cede"><td id="EhVc" class=""><a href="https://www.w3schools.com/tags/ev_onscroll.asp">onscroll</a></td><td id="UtL}" class=""><em>script</em></td><td id="y|kM" class="">Script to be run when an element&#x27;s scrollbar is being scrolled</td></tr></tbody></table><hr id="bd7ce5fb-3fa8-4389-87e8-5adae77df65a"/><h2 id="b9326b58-7684-498e-b8f0-25751d159c35" class="">Clipboard Events</h2><table id="6f840abc-266d-434e-bf6c-08e8fd88ece2" class="simple-table"><tbody><tr id="3e00e201-0c67-44dc-baa6-a10f5451d4cc"><td id="VAMV" class="">Attribute</td><td id=";~Jh" class="">Value</td><td id="DTIm" class="">Description</td></tr><tr id="8c5edd0d-132f-4760-906f-765f75b3a9b4"><td id="VAMV" class=""><a href="https://www.w3schools.com/tags/ev_oncopy.asp">oncopy</a></td><td id=";~Jh" class=""><em>script</em></td><td id="DTIm" class="">Fires when the user copies the content of an element</td></tr><tr id="97b747fa-0d41-4ef5-82ee-af383b9c5543"><td id="VAMV" class=""><a href="https://www.w3schools.com/tags/ev_oncut.asp">oncut</a></td><td id=";~Jh" class=""><em>script</em></td><td id="DTIm" class="">Fires when the user cuts the content of an element</td></tr><tr id="b19c4609-f5d9-4c8e-be89-f1df71a9b296"><td id="VAMV" class=""><a href="https://www.w3schools.com/tags/ev_onpaste.asp">onpaste</a></td><td id=";~Jh" class=""><em>script</em></td><td id="DTIm" class="">Fires when the user pastes some content in an element</td></tr></tbody></table><hr id="a8a996a7-0f86-4d54-a917-48f98c7f005a"/><h2 id="96c0e47f-7da1-442b-a8bf-d9fd4aae74be" class="">Media Events</h2><p id="d7066eaa-999b-4ad9-8732-3129b54493bd" class="">Events triggered by medias like videos, images and audio (applies to all HTML elements, but is most common in media elements, <br/>like &lt;audio&gt;, &lt;embed&gt;, &lt;img&gt;, &lt;object&gt;, and &lt;video&gt;).<br/></p><p id="b182cf7c-6702-4ba4-bb65-09e0153bdba0" class=""><strong>Tip:</strong> Look at our <a href="https://www.w3schools.com/tags/ref_av_dom.asp">HTML Audio and Video DOM Reference</a> <br/>for more information.<br/></p><table id="87492127-101f-4845-a2ec-445ea9cc734f" class="simple-table"><tbody><tr id="bf7e5df9-5154-4dae-97f1-828a50237d9a"><td id="cSOd" class="">Attribute</td><td id="HeHJ" class="">Value</td><td id="wbCm" class="">Description</td></tr><tr id="0499dcc7-9583-4e9d-9d49-56060d588229"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onabort.asp">onabort</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run on abort</td></tr><tr id="c4e8840c-a968-4d45-b686-92887ab785a2"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_oncanplay.asp">oncanplay</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when a file is ready to start playing (when it has buffered enough to begin)</td></tr><tr id="f2e1a593-a5f3-4ffc-884d-4f410da1358b"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_oncanplaythrough.asp">oncanplaythrough</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when a file can be played all the way to the end without pausing for buffering</td></tr><tr id="3a435b3b-883e-48f2-8088-dcf1ebc625b0"><td id="cSOd" class="">oncuechange</td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the cue changes in a &lt;track&gt; element</td></tr><tr id="b987d1ee-0d84-40d6-a1ef-13e0146287cb"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_ondurationchange.asp">ondurationchange</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the length of the media changes</td></tr><tr id="fa1eb3cc-5d6a-43c6-969f-cf9b84ac7edb"><td id="cSOd" class="">onemptied</td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects)</td></tr><tr id="0b728852-e3fb-4bcd-93a8-303119d185d4"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onended.asp">onended</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the media has reach the end (a useful event for messages like &quot;thanks for listening&quot;)</td></tr><tr id="82bb1cb9-42ed-4a36-acd6-ba526e5b407d"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_av_onerror.asp">onerror</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when an error occurs when the file is being loaded</td></tr><tr id="080a2dec-2b69-4815-8e3d-2865e0fe3b75"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onloadeddata.asp">onloadeddata</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when media data is loaded</td></tr><tr id="354713b9-d9eb-41fc-b1d6-d8f7bc0b577f"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onloadedmetadata.asp">onloadedmetadata</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when meta data (like dimensions and duration) are loaded</td></tr><tr id="4d0b1f5f-db53-48c4-baa2-ce91034cb0d7"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onloadstart.asp">onloadstart</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run just as the file begins to load before anything is actually <br/>loaded<br/></td></tr><tr id="7b787984-d31e-43ed-99c7-c874b09d9724"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onpause.asp">onpause</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the media is paused either by the user or programmatically</td></tr><tr id="569f9681-f5ce-4c4d-8ea9-db116bfff963"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onplay.asp">onplay</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the media is ready to start playing</td></tr><tr id="b2403ba1-28f8-4280-ad08-6afd6ddda952"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onplaying.asp">onplaying</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the media actually has started playing</td></tr><tr id="26540d8c-bf36-4e5b-a07f-6b0836a9400b"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onprogress.asp">onprogress</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the browser is in the process of getting the media <br/>data<br/></td></tr><tr id="1ea16acf-f560-4b0e-be8d-adc3d598c1b3"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onratechange.asp">onratechange</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run each time the playback rate changes (like when a user switches to a slow motion or fast forward mode)</td></tr><tr id="46125710-14b6-499e-b1eb-ca7ea8f5d5a4"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onseeked.asp">onseeked</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the seeking attribute is set to false indicating that seeking has ended</td></tr><tr id="25eef168-1644-40a3-a77d-9bd98d05f77b"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onseeking.asp">onseeking</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the seeking attribute is set to true indicating that seeking is active</td></tr><tr id="f144da67-e62b-4056-8d64-bc0a5e36d4a9"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onstalled.asp">onstalled</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the browser is unable to fetch the media data for whatever reason</td></tr><tr id="4b4815b4-2d68-4b5f-bb29-0041bbcfb689"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onsuspend.asp">onsuspend</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason</td></tr><tr id="48997574-7ec2-4f28-8c42-9348cb684bf9"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_ontimeupdate.asp">ontimeupdate</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the playing position has changed (like when the user fast forwards to a different point in the media)</td></tr><tr id="500318d4-9cc6-48a8-9b7d-eb53f5dbe150"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onvolumechange.asp">onvolumechange</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run each time the volume is changed which (includes setting the volume to &quot;mute&quot;)</td></tr><tr id="af79e80c-422e-46a4-ba40-cdeeb0bc583b"><td id="cSOd" class=""><a href="https://www.w3schools.com/tags/ev_onwaiting.asp">onwaiting</a></td><td id="HeHJ" class=""><em>script</em></td><td id="wbCm" class="">Script to be run when the media has paused but is expected to resume (like when the media pauses to buffer more data)</td></tr></tbody></table><hr id="fdd09005-3b0d-443c-a10a-1d95343cdd75"/><h2 id="5871773e-1b96-410b-bcab-51861f69b562" class="">Misc Events</h2><table id="ac5e0117-e71c-46c2-a02f-1614b90f4f0e" class="simple-table"><tbody><tr id="df1c1a3c-52ce-4fd2-b99d-c31c04c68719"><td id="&lt;gel" class="">Attribute</td><td id="|`tB" class="">Value</td><td id="GQvL" class="">Description</td></tr><tr id="9e9f4531-7bbb-4375-9e6e-1afa37e40f36"><td id="&lt;gel" class=""><a href="https://www.w3schools.com/tags/ev_ontoggle.asp">ontoggle</a></td><td id="|`tB" class=""><em>script</em></td><td id="GQvL" class="">Fires when the user opens or closes the &lt;details&gt; element</td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
